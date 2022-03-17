@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="648.0" prefWidth="1216.0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.281" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClassAction.ControllerHome">
+   <children>
+      <BorderPane layoutX="155.0" layoutY="91.0" prefHeight="680.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(43,51,162);" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="10.0" layoutY="32.0" style="-fx-background-color: rgba(0,0,0,0.5);" text="Tools IP Address" textFill="WHITE">
+                     <font>
+                        <Font name="Gabriola" size="35.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="64.0" layoutY="586.0" mnemonicParsing="false" onAction="#close" prefHeight="54.0" prefWidth="54.0" style="-fx-background-color: none; -fx-border-radius: 5; -fx-border-color: black;" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <Accordion BorderPane.alignment="CENTER">
+              <panes>
+                <TitledPane animated="false" text="IP Address / Network Address / Masque Address / Broadcast Address /  Wildcast Address">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="30.0" layoutY="42.0" text="IP Address">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" layoutX="30.0" layoutY="67.0" prefHeight="35.0" prefWidth="253.0">
+                                 <children>
+                                    <TextField fx:id="p1" onMouseExited="#ipCase1" prefHeight="29.0" prefWidth="44.0" />
+                                    <Label alignment="CENTER" text=".">
+                                       <font>
+                                          <Font name="Times New Roman" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="p2" layoutX="108.0" layoutY="11.0" onInputMethodTextChanged="#ipCase1" onMouseExited="#ipCase1" prefHeight="29.0" prefWidth="44.0" />
+                                    <Label alignment="CENTER" layoutX="138.0" layoutY="10.0" text=".">
+                                       <font>
+                                          <Font name="Times New Roman" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="p3" layoutX="142.0" layoutY="11.0" onMouseExited="#ipCase1" prefHeight="29.0" prefWidth="44.0" />
+                                    <Label alignment="CENTER" layoutX="172.0" layoutY="10.0" text=".">
+                                       <font>
+                                          <Font name="Times New Roman" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="p4" layoutX="176.0" layoutY="11.0" onMouseExited="#ipCase1" prefHeight="29.0" prefWidth="44.0" />
+                                    <Label alignment="CENTER" layoutX="206.0" layoutY="10.0" text="/">
+                                       <font>
+                                          <Font name="Times New Roman" size="31.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="p5" layoutX="206.0" layoutY="11.0" onMouseClicked="#mousePrefixe" onMouseExited="#ipCase1" prefHeight="29.0" prefWidth="43.0" />
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="30.0" layoutY="300.0" prefHeight="111.0" prefWidth="837.0">
+                                 <children>
+                                    <HBox prefHeight="127.0" prefWidth="837.0" style="-fx-background-color: rgba(0,0,0,0.1);">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="77.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: rgba(0,0,0,0.2);" text="Classe">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="classe" alignment="CENTER" prefHeight="84.0" prefWidth="77.0" style="-fx-background-color: rgba(0,0,0,0.2);" text="A">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="127.0" prefWidth="207.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="45.0" prefWidth="207.0" style="-fx-background-color: rgba(0,0,0,0.1);" text="Notation CIDR">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="notation" alignment="CENTER" prefHeight="98.0" prefWidth="207.0" style="-fx-background-color: rgba(0,0,0,0.1);" text="A">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="10.0" layoutY="10.0" prefHeight="111.0" prefWidth="162.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,0.2);" text="Adresse reseaux">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="adReseaux" alignment="CENTER" prefHeight="98.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,0.2);" text="A">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="684.0" layoutY="10.0" prefHeight="127.0" prefWidth="164.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="47.0" prefWidth="147.0" style="-fx-background-color: rgba(0,0,0,0.1);" text="Adresse Masque">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="mask" alignment="CENTER" prefHeight="89.0" prefWidth="147.0" style="-fx-background-color: rgba(0,0,0,0.1);" text="A">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="87.0" layoutY="10.0" prefHeight="111.0" prefWidth="167.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,0.2);" text="Adresse Broadcast">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="broadcast" alignment="CENTER" prefHeight="97.0" prefWidth="199.0" style="-fx-background-color: rgba(0,0,0,0.2);" text="A">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="251.0" layoutY="10.0" prefHeight="127.0" prefWidth="164.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="164.0" style="-fx-background-color: rgba(0,0, rgba(0,0,0,0.1)0,0.2);" text="Adresse Wildcast">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="wildcast" alignment="CENTER" prefHeight="100.0" prefWidth="164.0" text="A">
+                                                   <font>
+                                                      <Font name="Times New Roman" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="msgIP" layoutX="308.0" layoutY="84.0" />
+                              <Button layoutX="709.0" layoutY="166.0" mnemonicParsing="false" onAction="#lancer" prefHeight="63.0" prefWidth="157.0" style="-fx-background-color: rgb(0,213,51);" text="Lancer" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman" size="29.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="m6" layoutX="232.0" layoutY="160.0" onMouseExited="#ipCase1" prefHeight="29.0" prefWidth="7.0" visible="false" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                </TitledPane>
+                <TitledPane animated="false" style="-fx-background-color: rgb(0,213,51);" text="Network / Subneting">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="26.0" layoutY="20.0" text="Subnet">
+                                 <font>
+                                    <Font name="Times New Roman" size="29.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="83.0" text="Adresse Reseau">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="nbreSubnet" layoutX="29.0" layoutY="207.0" onMouseEntered="#lastCaseVerify" prefHeight="29.0" prefWidth="44.0" />
+                              <Label layoutX="27.0" layoutY="177.0" text="Nombre de sous reseaux">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="msgErrorSubnet" layoutX="256.0" layoutY="127.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="msgErrorNbre" layoutX="89.0" layoutY="220.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnSubnet" layoutX="30.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnSubnet" onMouseEntered="#lastCaseVerify" prefHeight="52.0" prefWidth="106.0" style="-fx-background-color: rgb(0,213,51);" text="Lancer" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman" size="21.0" />
+                                 </font>
+                              </Button>
+                              <ListView fx:id="listSubnet" layoutX="326.0" layoutY="147.0" prefHeight="429.0" prefWidth="661.0" style="-fx-font-size: 14;" />
+                              <Label fx:id="msgNbreSubnet" layoutX="327.0" layoutY="119.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="msgNbreHost" layoutX="538.0" layoutY="123.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="msgAdresseMAC" layoutX="158.0" layoutY="415.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="16.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" layoutX="29.0" layoutY="111.0" prefHeight="34.0" prefWidth="198.0">
+                                 <children>
+                                    <TextField fx:id="r1" onMouseExited="#verifyNetworkAd" prefHeight="29.0" prefWidth="44.0" />
+                                    <Label fx:id="msgErrorNbre1" text=".">
+                                       <font>
+                                          <Font name="Times New Roman" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="r2" layoutX="77.0" layoutY="10.0" onKeyReleased="#lastCaseVerify" onMouseExited="#verifyNetworkAd" prefHeight="29.0" prefWidth="44.0" />
+                                    <Label fx:id="msgErrorNbre11" layoutX="141.0" layoutY="12.0" text=".">
+                                       <font>
+                                          <Font name="Times New Roman" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="r3" layoutX="145.0" layoutY="10.0" onKeyReleased="#lastCaseVerify" onMouseExited="#verifyNetworkAd" prefHeight="29.0" prefWidth="44.0" />
+                                    <Label fx:id="msgErrorNbre111" layoutX="175.0" layoutY="12.0" text=".">
+                                       <font>
+                                          <Font name="Times New Roman" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="r4" layoutX="178.0" layoutY="10.0" onKeyReleased="#lastCaseVerify" prefHeight="29.0" prefWidth="44.0" />
+                                 </children>
+                              </HBox>
+                              <Label fx:id="msgClassNotify" layoutX="214.0" layoutY="381.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="31.0" layoutY="417.0" text="Adresse Masque :">
+                                 <font>
+                                    <Font name="Times New Roman" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="31.0" layoutY="383.0" text="Adresse réseaux de classe :">
+                                 <font>
+                                    <Font name="Times New Roman" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                </TitledPane>
+                <TitledPane animated="false" text="IPV6">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="29.0" layoutY="44.0" text="Adresse MAC">
+                                 <font>
+                                    <Font name="Times New Roman" size="17.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" layoutX="29.0" layoutY="74.0" prefHeight="35.0" prefWidth="291.0">
+                                 <children>
+                                    <TextField fx:id="ad1" onMouseExited="#mous" prefHeight="29.0" prefWidth="44.0">
+                                       <font>
+                                          <Font name="Times New Roman" size="14.0" />
+                                       </font></TextField>
+                                    <Label text=":">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ad2" layoutX="159.0" layoutY="10.0" onMouseExited="#mous" prefHeight="29.0" prefWidth="44.0">
+                                       <font>
+                                          <Font name="Times New Roman" size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="182.0" layoutY="10.0" text=":">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ad3" layoutX="185.0" layoutY="10.0" onMouseExited="#mous" prefHeight="29.0" prefWidth="44.0">
+                                       <font>
+                                          <Font name="Times New Roman" size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="208.0" layoutY="10.0" text=":">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ad4" layoutX="211.0" layoutY="10.0" onMouseExited="#mous" prefHeight="29.0" prefWidth="44.0">
+                                       <font>
+                                          <Font name="Times New Roman" size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="234.0" layoutY="10.0" text=":">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ad5" layoutX="237.0" layoutY="10.0" onMouseExited="#mous" prefHeight="29.0" prefWidth="44.0">
+                                       <font>
+                                          <Font name="Times New Roman" size="14.0" />
+                                       </font></TextField>
+                                    <Label layoutX="260.0" layoutY="10.0" text=":">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ad6" layoutX="263.0" layoutY="10.0" onMouseExited="#mous" prefHeight="29.0" prefWidth="44.0">
+                                       <font>
+                                          <Font name="Times New Roman" size="14.0" />
+                                       </font></TextField>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="traduire" layoutX="29.0" layoutY="152.0" mnemonicParsing="false" onAction="#traduire" style="-fx-background-color: rgb(0,213,51);" text="Traduire en IPV6" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="ipv6" alignment="CENTER" layoutX="233.0" layoutY="329.0" prefHeight="44.0" prefWidth="391.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="31.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="397.0" layoutY="273.0" prefHeight="44.0" prefWidth="78.0" text="IPV6">
+                                 <font>
+                                    <Font name="Times New Roman" size="31.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="msgErrorIPV6" layoutX="363.0" layoutY="92.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font name="Times New Roman" size="15.0" />
+                     </font>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

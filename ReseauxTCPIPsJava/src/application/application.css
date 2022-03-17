@@ -1,0 +1,6 @@
+#textError {
+	-fx-text-fill: red
+}
+#textCorrecte  {
+	-fx-text-fill : black 
+}
